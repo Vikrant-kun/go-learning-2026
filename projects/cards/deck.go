@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 
 	"strings"
-)
+) 
 
 type deck []string
 
