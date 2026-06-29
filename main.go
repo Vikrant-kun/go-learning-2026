@@ -2,18 +2,15 @@ package main
 
 import "fmt"
 
-func main() {
-	mp := map[uint]uint{}
-	n := uint(100)
-
-	for number := uint(1); number <= n; number++ {
-		for d := uint(1); d <= 5; d ++ {
-			if number % d == 0 {
-				mp[d]++
-			}
-		}
+func getfunc(str string) func(string) string {
+	return func(str2 string ) string {
+		return str + str2 
 	}
-	fmt.Print(mp)
-
 }
- 
+
+func main() {
+	f1 := getfunc("Hello")
+	value := f1("World")
+	value2 := f1(" Vikrant")
+	fmt.Println(value, value2)
+}
