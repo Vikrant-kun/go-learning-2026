@@ -1,19 +1,18 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	mp := map[uint]uint{}
-	n := uint(100)
-
-	for number := uint(1); number <= n; number ++ {
-		for d := uint(1); d <= 5; d++ {
-			if number%d == 0 {
-				mp[d]++
-			}
-		}
+	users := map[int]string{
+		101: "Vikrant",
+		102: "Ankit",
+		103: "Rahul",
 	}
-	fmt.Println(mp)
+	var id int
+
+	fmt.Print("Enter User ID: ")
+	fmt.Scan(&id)
+
+	fmt.Println("Username: ", users[id])
 }
+
